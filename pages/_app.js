@@ -17,15 +17,15 @@ const fetcher = async (apiURL) => {
 };
 
 export default function App({ Component, pageProps }) {
-  const { data: art, error, isLoading } = useSWR(apiURL, fetcher);
+  const { data: artPiece, error, isLoading } = useSWR(apiURL, fetcher);
   if (error) return <div>{error.message}</div>;
   if (isLoading) return <div>loading...</div>;
 
   return (
     <>
-      <h1>{art.map((art) => art.name)}</h1>
+      <h1>{artPiece.map((artPiece) => artPiece.name)}</h1>
       <GlobalStyle />
-      <Component {...pageProps} />
+      <Component {...pageProps} artPiece={artPiece} />
     </>
   );
 }
