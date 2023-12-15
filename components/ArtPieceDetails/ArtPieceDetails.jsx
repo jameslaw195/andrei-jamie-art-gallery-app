@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ArtPieceDetails({
   slug,
-  image,
+  // image,
   name,
   artist,
   year,
@@ -11,7 +11,7 @@ export default function ArtPieceDetails({
   return (
     <>
       <p> {slug} </p>
-      <Image src={image} alt={`${title}`} />
+      {/* <Image src={image} alt={`${name}`} /> */}
       <h1> {name} </h1>
       <p> {artist} </p>
       <p> {year} </p>

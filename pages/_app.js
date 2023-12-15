@@ -3,6 +3,7 @@ import useSWR from "swr";
 import Layout from "../components/Layout/Layout";
 import useLocalStorageState from "use-local-storage-state";
 import { useImmerLocalStorageState } from "./lib/hook/useImmerLocalStorageState";
+import ArtPieceDetailsPage from "./art-pieces/[slug]";
 
 const apiURL = "https://example-apis.vercel.app/api/art";
 
@@ -31,8 +32,8 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      <h1>{artPiece.map((artPiece) => artPiece.name)}</h1>
       <GlobalStyle />
+      <ArtPieceDetailsPage artPiece={artPiece} />
       <Component
         {...pageProps}
         artPiece={artPiece}
