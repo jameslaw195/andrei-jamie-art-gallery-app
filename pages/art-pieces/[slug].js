@@ -4,17 +4,19 @@ export default function ArtPieceDetails({ artPiece }) {
   const router = useRouter();
   const { slug } = router.query;
 
-  const piece = artPiece.find((piece) => piece.slug === slug);
+  console.log("art pice in Art pice detil page", artPiece);
+  // const piece = artPiece.find((piece) => piece.slug === slug);
 
   return (
     <>
-      <ArtPieceDetails
-      // name={piece.name}
-      // image={piece.imageSource}
-      // genre={piece.genre}
-      // artist={piece.artist}
-      // year={piece.year}
-      />
+      <h1>Hi art piece details</h1>
+      {/* <ArtPieceDetails
+        name={piece.name}
+        image={piece.imageSource}
+        genre={piece.genre}
+        artist={piece.artist}
+        year={piece.year}
+      /> */}
     </>
   );
 }

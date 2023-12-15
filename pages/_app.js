@@ -20,10 +20,10 @@ const fetcher = async (apiURL) => {
 };
 
 export default function App({ Component, pageProps }) {
-  const [artPiecesInfo, setArtPiecesInfo] = useImmerLocalStorageState(
-    "Art Pieces Info",
-    { defaultValue: [] }
-  );
+  // const [artPiecesInfo, setArtPiecesInfo] = useImmerLocalStorageState(
+  //   "Art Pieces Info",
+  //   { defaultValue: [] }
+  // );
 
   const { data: artPiece, error, isLoading } = useSWR(apiURL, fetcher);
   if (error) return <div>{error.message}</div>;
@@ -36,7 +36,7 @@ export default function App({ Component, pageProps }) {
       <Component
         {...pageProps}
         artPiece={artPiece}
-        artPiecesInfo={artPiecesInfo}
+        // artPiecesInfo={artPiecesInfo}
       />
       <Layout />
     </>
