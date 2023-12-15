@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function ArtPieces({ pieces }) {
-  return <>ArtPieces</>;
+export default function ArtPieces({ artPiece }) {
+  return <></>;
 }

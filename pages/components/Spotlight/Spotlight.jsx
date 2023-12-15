@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function Spotlight() {
-  return <>function to pick one art piece</>;
+export default function Spotlight({ randomPiece }) {
+  return <>{randomPiece.name}</>;
 }
