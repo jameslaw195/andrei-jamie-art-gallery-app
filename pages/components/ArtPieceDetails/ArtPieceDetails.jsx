@@ -1,10 +1,18 @@
 import Image from "next/image";
 
-export default function ArtPieceDetails({ image, title, artist, year, genre }) {
+export default function ArtPieceDetails({
+  slug,
+  image,
+  name,
+  artist,
+  year,
+  genre,
+}) {
   return (
     <>
+      <p> {slug} </p>
       <Image src={image} alt={`${title}`} />
-      <h1> {title} </h1>
+      <h1> {name} </h1>
       <p> {artist} </p>
       <p> {year} </p>
       <p> {genre} </p>

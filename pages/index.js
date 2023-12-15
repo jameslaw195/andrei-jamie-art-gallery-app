@@ -1,3 +1,4 @@
+import ArtPieceDetails from "./art-pieces/[slug]";
 import Spotlight from "./components/Spotlight/Spotlight";
 
 export default function SpotlightPage({ artPiece }) {
@@ -5,5 +6,10 @@ export default function SpotlightPage({ artPiece }) {
 
   const randomPiece = artPiece[randomIndex];
 
-  return <Spotlight randomPiece={randomPiece} />;
+  return (
+    <>
+      <Spotlight randomPiece={randomPiece} />
+      <ArtPieceDetails />
+    </>
+  );
 }
