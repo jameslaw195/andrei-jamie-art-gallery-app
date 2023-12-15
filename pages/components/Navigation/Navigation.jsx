@@ -4,7 +4,7 @@ export default function Navigation() {
   return (
     <ul>
       <li>
-        <Link href="/"> Home </Link>
+        <Link href="/">Spotlight</Link>
       </li>
       <li>
         <Link href="/art-pieces"> Art Pieces</Link>
