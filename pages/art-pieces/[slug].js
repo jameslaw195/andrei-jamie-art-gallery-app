@@ -9,11 +9,11 @@ export default function ArtPieceDetails({ artPiece }) {
   return (
     <>
       <ArtPieceDetails
-        name={piece.name}
-        image={piece.imageSource}
-        genre={piece.genre}
-        artist={piece.artist}
-        year={piece.year}
+      // name={piece.name}
+      // image={piece.imageSource}
+      // genre={piece.genre}
+      // artist={piece.artist}
+      // year={piece.year}
       />
     </>
   );

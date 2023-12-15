@@ -1,5 +1,5 @@
 import ArtPieceDetails from "./art-pieces/[slug]";
-import Spotlight from "./components/Spotlight/Spotlight";
+import Spotlight from "../components/Spotlight/Spotlight";
 
 export default function SpotlightPage({ artPiece }) {
   const randomIndex = Math.floor(Math.random() * artPiece.length);

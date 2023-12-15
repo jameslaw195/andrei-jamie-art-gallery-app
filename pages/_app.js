@@ -1,6 +1,8 @@
 import GlobalStyle from "../styles";
 import useSWR from "swr";
-import Layout from "./components/Layout/Layout";
+import Layout from "../components/Layout/Layout";
+import useLocalStorageState from "use-local-storage-state";
+import { useImmerLocalStorageState } from "./lib/hook/useImmerLocalStorageState";
 
 const apiURL = "https://example-apis.vercel.app/api/art";
 
@@ -18,6 +20,11 @@ const fetcher = async (apiURL) => {
 };
 
 export default function App({ Component, pageProps }) {
+  const [artPiecesInfo, setArtPiecesInfo] = useImmerLocalStorageState(
+    "Art Pieces Info",
+    { defaultValue: [] }
+  );
+
   const { data: artPiece, error, isLoading } = useSWR(apiURL, fetcher);
   if (error) return <div>{error.message}</div>;
   if (isLoading) return <div>loading...</div>;
@@ -26,7 +33,11 @@ export default function App({ Component, pageProps }) {
     <>
       <h1>{artPiece.map((artPiece) => artPiece.name)}</h1>
       <GlobalStyle />
-      <Component {...pageProps} artPiece={artPiece} />
+      <Component
+        {...pageProps}
+        artPiece={artPiece}
+        artPiecesInfo={artPiecesInfo}
+      />
       <Layout />
     </>
   );
