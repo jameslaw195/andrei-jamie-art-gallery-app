@@ -1,6 +1,6 @@
 import { HeartIcon } from "@/Assets/ButtonIcon";
 
-export default function favouriteButton({
+export default function FavouriteButton({
   slug,
   isFavourite,
   onToggleFavourite,

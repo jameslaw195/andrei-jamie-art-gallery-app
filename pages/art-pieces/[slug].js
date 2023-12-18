@@ -2,7 +2,11 @@ import ArtPieceDetails from "@/components/ArtPieceDetails/ArtPieceDetails";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 
-export default function ArtPieceDetailsPage({ artPiece }) {
+export default function ArtPieceDetailsPage({
+  artPiece,
+  artPiecesInfo,
+  onToggleFavourite,
+}) {
   const router = useRouter();
   const { slug } = router.query;
 
@@ -10,20 +14,21 @@ export default function ArtPieceDetailsPage({ artPiece }) {
     artPiece.find((piece) => piece.slug === slug);
   }, [artPiece, slug]);
 
-  console.log(artPiece);
+  if (!artPiece) {
+    return null;
+  }
 
-  // if (!artPiece) {
-  //   return null;
-  // }
   return (
     <>
       <h1>Hi art piece details</h1>
       <ArtPieceDetails
         name={artPiece.name}
-        // image={artPiece.imageSource}
+        image={artPiece.imageSource}
         genre={artPiece.genre}
         artist={artPiece.artist}
         year={artPiece.year}
+        onToggleFavourite={onToggleFavourite}
+        artPiecesInfo={artPiecesInfo}
       />
     </>
   );
