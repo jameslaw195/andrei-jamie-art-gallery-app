@@ -6,7 +6,7 @@ export default function ArtPieces({ artPiece }) {
     <>
       {artPiece.map((artPiece) => {
         <ArtPiecePreview
-          image={artPiece.imageSource}
+          // image={artPiece.imageSource}
           name={artPiece.name}
           artist={artPiece.artist}
         />;

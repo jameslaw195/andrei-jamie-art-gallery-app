@@ -10,7 +10,6 @@ export default function SpotlightPage({ artPiece }) {
     <>
       <h1> I am in in index.js in pages root </h1>
       <Spotlight randomPiece={randomPiece} />
-      <ArtPieceDetails />
     </>
   );
 }

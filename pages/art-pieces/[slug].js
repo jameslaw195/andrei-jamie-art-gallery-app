@@ -8,7 +8,7 @@ export default function ArtPieceDetailsPage({ artPiece }) {
 
   console.log("slug here", slug);
 
-  console.log("art pice in Art pice detil page", artPiece);
+  // console.log("art pice in Art pice detil page", artPiece);
   // const piece = artPiece.find((piece) => piece.slug === slug);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function ArtPieceDetailsPage({ artPiece }) {
       <h1>Hi art piece details</h1>
       <ArtPieceDetails
         name={artPiece.name}
-        // image={piece.imageSource}
+        // image={artPiece.imageSource}
         genre={artPiece.genre}
         artist={artPiece.artist}
         year={artPiece.year}

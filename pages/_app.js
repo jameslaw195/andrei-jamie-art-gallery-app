@@ -1,9 +1,9 @@
 import GlobalStyle from "../styles";
 import useSWR from "swr";
-import Layout from "../components/Layout/Layout";
 import useLocalStorageState from "use-local-storage-state";
 import { useImmerLocalStorageState } from "./lib/hook/useImmerLocalStorageState";
 import ArtPieceDetailsPage from "./art-pieces/[slug]";
+import Layout from "@/components/Layout/Layout";
 
 const apiURL = "https://example-apis.vercel.app/api/art";
 
