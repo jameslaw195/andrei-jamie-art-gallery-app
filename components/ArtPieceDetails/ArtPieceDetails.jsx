@@ -1,5 +1,9 @@
 import Image from "next/image";
 import FavouriteButton from "../FavouriteButton/FavouriteButton";
+import CommentForm from "../CommentForm/CommentForm";
+import Comments from "../Comments/Comments";
+import { uid } from "uid";
+import { useImmerLocalStorageState } from "@/pages/lib/hook/useImmerLocalStorageState";
 
 export default function ArtPieceDetails({
   slug,
@@ -10,8 +14,22 @@ export default function ArtPieceDetails({
   genre,
   onToggleFavourite,
   isFavourite,
-  artPiecesInfo,
 }) {
+  const [comments, setComments] = useImmerLocalStorageState("comment", {
+    defaultValue: [],
+  });
+
+  function handleAddComment(newComment) {
+    const date = new Date().toLocaleDateString("en-gb", {
+      dateStyle: "medium",
+    });
+    const time = new Date().toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+
+    setComments([{ id: uid(), time, date, ...newComment }, ...comments]);
+  }
   return (
     <>
       <p> {slug} </p>
@@ -25,6 +43,8 @@ export default function ArtPieceDetails({
         isFavourite={isFavourite}
         slug={slug}
       />
+      <Comments comments={comments} />
+      <CommentForm onAddComment={handleAddComment} />
     </>
   );
 }
