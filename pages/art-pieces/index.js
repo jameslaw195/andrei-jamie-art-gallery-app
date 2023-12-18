@@ -6,6 +6,7 @@ export default function artPiecesPage({ artPiece }) {
   return (
     <>
       <h1> Here I should show all my art pieces detiles</h1>
+      {/* <ArtPieces artPiece={artPiece} /> */}
     </>
   );
 }

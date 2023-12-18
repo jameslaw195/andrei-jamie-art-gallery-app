@@ -1,9 +1,16 @@
 import React from "react";
+import ArtPiecePreview from "../ArtPiecePreview/ArtPiecePreview";
 
 export default function ArtPieces({ artPiece }) {
   return (
     <>
-      <h1>{artPiece.map((artPiece) => artPiece.name)}</h1>
+      {artPiece.map((artPiece) => {
+        <ArtPiecePreview
+          image={artPiece.imageSource}
+          name={artPiece.name}
+          artist={artPiece.artist}
+        />;
+      })}
     </>
   );
 }

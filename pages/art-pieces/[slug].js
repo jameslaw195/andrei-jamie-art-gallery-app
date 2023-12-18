@@ -9,11 +9,11 @@ export default function ArtPieceDetailsPage({ artPiece }) {
   console.log("slug here", slug);
 
   console.log("art pice in Art pice detil page", artPiece);
-  const piece = artPiece.find((piece) => piece.slug === slug);
+  // const piece = artPiece.find((piece) => piece.slug === slug);
 
-  // useEffect(() => {
-  //   piece = artPiece.find((piece) => piece.slug === slug);
-  // }, [artPiece, slug]);
+  useEffect(() => {
+    artPiece.find((piece) => piece.slug === slug);
+  }, [artPiece, slug]);
 
   if (!artPiece) {
     return null;
@@ -22,11 +22,11 @@ export default function ArtPieceDetailsPage({ artPiece }) {
     <>
       <h1>Hi art piece details</h1>
       <ArtPieceDetails
-        name={piece.name}
+        name={artPiece.name}
         // image={piece.imageSource}
-        genre={piece.genre}
-        artist={piece.artist}
-        year={piece.year}
+        genre={artPiece.genre}
+        artist={artPiece.artist}
+        year={artPiece.year}
       />
     </>
   );
