@@ -29,21 +29,26 @@ export default function App({ Component, pageProps }) {
     { defaultValue: [] }
   );
 
-  function handleToggleFavourite(slug) {
+  console.log("favourites array", artPiecesInfo);
+
+  function handleToggleFavourite(clickedSlug) {
     const artPieceFavourite = artPiecesInfo.find(
-      (piece) => piece.slug === slug
+      (piece) => piece.slug === clickedSlug
     );
 
     if (artPieceFavourite) {
       setArtPiecesInfo(
         artPiecesInfo.map((pieceInfo) =>
-          pieceInfo.slug === slug
-            ? { slug, isFavourite: !pieceInfo.isFavourite }
+          pieceInfo.slug === clickedSlug
+            ? { slug: clickedSlug, isFavourite: !pieceInfo.isFavourite }
             : pieceInfo
         )
       );
     } else {
-      setArtPiecesInfo([...artPiecesInfo, { slug, isFavourite: true }]);
+      setArtPiecesInfo([
+        ...artPiecesInfo,
+        { slug: clickedSlug, isFavourite: true },
+      ]);
     }
   }
 
