@@ -9,7 +9,7 @@ export default function ArtPieces({ artPiece }) {
       {artPiece.map((artPiece) => (
         <Link href={`/art-pieces/${artPiece.slug}`} key={artPiece.slug}>
           <ArtPiecePreview
-            // image={artPiece.imageSource}
+            image={artPiece.imageSource}
             name={artPiece.name}
             artist={artPiece.artist}
           />
