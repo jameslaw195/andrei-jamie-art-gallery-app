@@ -1,7 +1,18 @@
-export default function HomePage() {
+import ArtPieceDetails from "./art-pieces/[slug]";
+import Spotlight from "../components/Spotlight/Spotlight";
+
+export default function SpotlightPage({ onToggleFavourite, artPiece }) {
+  const randomIndex = Math.floor(Math.random() * artPiece.length);
+
+  const randomPiece = artPiece[randomIndex];
+
   return (
-    <div>
-      <h1>Hello from Next.js</h1>
-    </div>
+    <>
+      <h1> I am in in index.js in pages root </h1>
+      <Spotlight
+        onToggleFavourite={onToggleFavourite}
+        randomPiece={randomPiece}
+      />
+    </>
   );
 }
