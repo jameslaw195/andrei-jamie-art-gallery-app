@@ -36,9 +36,9 @@ export default function App({ Component, pageProps }) {
 
     if (artPieceFavourite) {
       setArtPiecesInfo(
-        artPiecesInfo.map((peiceInfo) =>
-          peiceInfo.slug === slug
-            ? { slug, isFavourite: !peiceInfo.isFavourite }
+        artPiecesInfo.map((pieceInfo) =>
+          pieceInfo.slug === slug
+            ? { slug, isFavourite: !pieceInfo.isFavourite }
             : pieceInfo
         )
       );
@@ -57,7 +57,7 @@ export default function App({ Component, pageProps }) {
         {...pageProps}
         artPiece={artPiece}
         artPiecesInfo={artPiecesInfo}
-        handleToggleFavourite={handleToggleFavourite}
+        onToggleFavourite={handleToggleFavourite}
       />
       <Layout />
     </>
