@@ -8,7 +8,7 @@ export default function ArtPieces({ artPiece }) {
       {artPiece.map((artPiece, index) => (
         <ArtPiecePreview
           key={artPiece.index}
-          // image={artPiece.imageSource}
+          image={artPiece.imageSource}
           name={artPiece.name}
           artist={artPiece.artist}
         />
