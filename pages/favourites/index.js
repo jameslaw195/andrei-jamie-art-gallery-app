@@ -5,30 +5,19 @@ export default function FavouritesPage({
   onToggleFavourite,
   artPiecesInfo,
 }) {
-  console.log("i am in favourites page", artPiecesInfo);
+  console.log("i am art piece info", artPiecesInfo);
 
-  let filteredArray = artPiecesInfo.filter(
-    (piece) => piece.isFavourite === true
-  );
+  let filteredArray = artPiece.filter((piece) => {
+    return artPiecesInfo.find((artPiece) => artPiece.slug === piece.slug);
+  });
 
   console.log("FILTERED ARRAY", filteredArray);
 
-  //   let filteredPieces = artPiece
-  //     .map((piece) => {
-  //       return (
-  //         <div key={piece.index}>
-  //           <p>{piece.name}</p>{" "}
-  //         </div>
-  //       );
-  //     })
-  //     .filter((piece) => piece.isFavourite === true);
-
   return (
     <ArtPieces
-      artPiece={artPiece}
+      artPiece={filteredArray}
       onToggleFavourite={onToggleFavourite}
       artPiecesInfo={artPiecesInfo}
-      //   filteredPieces={filteredPieces}
     />
   );
 }

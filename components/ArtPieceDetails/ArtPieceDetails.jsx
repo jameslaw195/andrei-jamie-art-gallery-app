@@ -2,7 +2,6 @@ import Image from "next/image";
 import FavouriteButton from "../FavouriteButton/FavouriteButton";
 
 export default function ArtPieceDetails({
-  clickedSlug,
   slug,
   image,
   name,
@@ -24,7 +23,7 @@ export default function ArtPieceDetails({
       <FavouriteButton
         onToggleFavourite={onToggleFavourite}
         isFavourite={isFavourite}
-        // clickedSlug={clickedSlug}
+        slug={slug}
       />
     </>
   );

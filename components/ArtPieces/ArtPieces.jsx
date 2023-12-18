@@ -5,7 +5,8 @@ import Link from "next/link";
 export default function ArtPieces({
   onToggleFavourite,
   artPiece,
-  filteredPieces,
+  pieces,
+  artPiecesInfo,
 }) {
   return (
     <>
@@ -17,7 +18,10 @@ export default function ArtPieces({
             artist={artPiece.artist}
             slug={artPiece.slug}
             onToggleFavourite={onToggleFavourite}
-            filteredPieces={filteredPieces}
+            // isFavorite={
+            //   pieces.find((artPiece1) => artPiece1.slug === artPiece.slug)
+            //     ?.isFavorite
+            // }
           />
         </Link>
       ))}

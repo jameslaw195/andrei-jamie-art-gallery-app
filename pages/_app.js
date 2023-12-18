@@ -29,7 +29,7 @@ export default function App({ Component, pageProps }) {
     { defaultValue: [] }
   );
 
-  console.log("favourites array", artPiecesInfo);
+  // console.log("favourites array", artPiecesInfo);
 
   function handleToggleFavourite(clickedSlug) {
     console.log("this is clicked slug", clickedSlug);

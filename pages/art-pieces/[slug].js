@@ -10,25 +10,27 @@ export default function ArtPieceDetailsPage({
   const router = useRouter();
   const { slug } = router.query;
 
-  useEffect(() => {
-    artPiece.find((piece) => piece.slug === slug);
-  }, [artPiece, slug]);
+  // useEffect(() => {
+  const newPiece = artPiece.find((piece) => piece.slug === slug);
+  // }, [artPiece, slug]);
 
   if (!artPiece) {
     return null;
   }
+  console.log("art piece info", artPiecesInfo);
 
   return (
     <>
       <h1>Hi art piece details</h1>
       <ArtPieceDetails
-        name={artPiece.name}
-        image={artPiece.imageSource}
-        genre={artPiece.genre}
-        artist={artPiece.artist}
-        year={artPiece.year}
+        name={newPiece.name}
+        image={newPiece.imageSource}
+        genre={newPiece.genre}
+        artist={newPiece.artist}
+        year={newPiece.year}
         onToggleFavourite={onToggleFavourite}
         artPiecesInfo={artPiecesInfo}
+        slug={newPiece.slug}
       />
     </>
   );
