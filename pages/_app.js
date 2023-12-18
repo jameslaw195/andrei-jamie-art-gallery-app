@@ -33,7 +33,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <GlobalStyle />
-      <ArtPieceDetailsPage artPiece={artPiece} />
+      {/* <ArtPieceDetailsPage artPiece={artPiece} /> */}
       <Component
         {...pageProps}
         artPiece={artPiece}
