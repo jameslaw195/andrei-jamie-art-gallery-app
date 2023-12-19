@@ -17,6 +17,8 @@ export default function ArtPieceDetails({
   onToggleFavourite,
   isFavourite,
   colors,
+  artPiecesInfo,
+  artPiece,
 }) {
   const [comments, setComments] = useImmerLocalStorageState("comment", {
     defaultValue: [],
@@ -47,9 +49,12 @@ export default function ArtPieceDetails({
       <h4> {year} </h4>
       <h4> {genre} </h4>
       <FavouriteButton
+        artPiecesInfo={artPiecesInfo}
         onToggleFavourite={onToggleFavourite}
-        isFavourite={isFavourite}
         slug={slug}
+        isFavourite={
+          artPiecesInfo.find((piece) => piece.slug === slug)?.isFavourite
+        }
       />
       <Colors colors={colors} />
       <CommentForm onAddComment={handleAddComment} />
