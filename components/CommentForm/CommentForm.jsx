@@ -7,6 +7,8 @@ export default function CommentForm({ onAddComment }) {
 
     onAddComment(formText);
 
+    console.log(formText);
+
     event.target.reset();
   }
 

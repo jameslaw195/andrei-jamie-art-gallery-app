@@ -32,7 +32,6 @@ export default function ArtPieceDetails({
   }
   return (
     <>
-      <p> {slug} </p>
       <Image src={image} alt={` ${name}`} width={243} height={192} />
       <h1> {name} </h1>
       <p> {artist} </p>
@@ -43,8 +42,8 @@ export default function ArtPieceDetails({
         isFavourite={isFavourite}
         slug={slug}
       />
-      <Comments comments={comments} />
       <CommentForm onAddComment={handleAddComment} />
+      <Comments comments={comments} />
     </>
   );
 }
