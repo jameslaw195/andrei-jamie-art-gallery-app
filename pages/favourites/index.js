@@ -17,10 +17,13 @@ export default function FavouritesPage({
   console.log("FILTERED ARRAY", filteredArray);
 
   return (
-    <ArtPieces
-      artPiece={filteredArray}
-      onToggleFavourite={onToggleFavourite}
-      artPiecesInfo={artPiecesInfo}
-    />
+    <>
+      <h1> Favourites </h1>
+      <ArtPieces
+        artPiece={filteredArray}
+        onToggleFavourite={onToggleFavourite}
+        artPiecesInfo={artPiecesInfo}
+      />
+    </>
   );
 }
