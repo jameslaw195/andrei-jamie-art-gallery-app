@@ -47,7 +47,9 @@ export default function ArtPieceDetails({
         isFavourite={isFavourite}
         slug={slug}
       />
+      <Colors colors={colors} />
       <CommentForm onAddComment={handleAddComment} />
+      <Comments comments={comments} />
     </>
   );
 }
