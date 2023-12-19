@@ -6,7 +6,10 @@ export default function FavouriteButton({
   onToggleFavourite,
 }) {
   return (
-    <button onClick={() => onToggleFavourite(slug)}>
+    <button
+      className="favourite-button"
+      onClick={() => onToggleFavourite(slug)}
+    >
       <HeartIcon fill={isFavourite ? "red" : "black"} />
     </button>
   );

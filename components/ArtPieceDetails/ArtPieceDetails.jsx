@@ -36,12 +36,12 @@ export default function ArtPieceDetails({
   console.log("colors here", colors);
 
   return (
-    <>
+    <div>
       <Image src={image} alt={` ${name}`} width={243} height={192} />
       <h1> {name} </h1>
-      <p> {artist} </p>
-      <p> {year} </p>
-      <p> {genre} </p>
+      <h3 className="artist-name"> {artist} </h3>
+      <h4> {year} </h4>
+      <h4> {genre} </h4>
       <FavouriteButton
         onToggleFavourite={onToggleFavourite}
         isFavourite={isFavourite}
@@ -50,6 +50,6 @@ export default function ArtPieceDetails({
       <Colors colors={colors} />
       <CommentForm onAddComment={handleAddComment} />
       <Comments comments={comments} />
-    </>
+    </div>
   );
 }

@@ -9,7 +9,7 @@ export default function ArtPieces({
   artPiecesInfo,
 }) {
   return (
-    <>
+    <div className="art-pieces-container">
       {artPiece.map((artPiece) => (
         <ArtPiecePreview
           key={artPiece.slug}
@@ -24,6 +24,6 @@ export default function ArtPieces({
           // }
         />
       ))}
-    </>
+    </div>
   );
 }

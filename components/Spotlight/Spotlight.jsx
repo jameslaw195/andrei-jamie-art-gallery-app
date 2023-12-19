@@ -3,7 +3,7 @@ import ArtPiecePreview from "../ArtPiecePreview/ArtPiecePreview";
 
 export default function Spotlight({ randomPiece, onToggleFavourite }) {
   return (
-    <>
+    <div className="spotlight-container">
       <ArtPiecePreview
         image={randomPiece.imageSource}
         name={randomPiece.name}
@@ -12,6 +12,6 @@ export default function Spotlight({ randomPiece, onToggleFavourite }) {
         onToggleFavourite={onToggleFavourite}
         slug={randomPiece.slug}
       />
-    </>
+    </div>
   );
 }

@@ -3,7 +3,7 @@ export default function Comments({ comments }) {
     <div>
       {comments?.map((comment, index) => {
         return (
-          <div key={index}>
+          <div className="comments-container" key={index}>
             <p>{comment.text}</p>
             <p>
               {comment.date} {comment.time}
