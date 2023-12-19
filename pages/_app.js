@@ -26,10 +26,7 @@ export default function App({ Component, pageProps }) {
     { defaultValue: [] }
   );
 
-  // console.log("favourites array", artPiecesInfo);
-
   function handleToggleFavourite(clickedSlug) {
-    console.log("this is clicked slug", clickedSlug);
     const artPieceFavourite = artPiecesInfo.find(
       (piece) => piece.slug === clickedSlug
     );

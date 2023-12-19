@@ -11,6 +11,7 @@ export default function ArtPiecePreview({
   onToggleFavourite,
   slug,
 }) {
+  // console.log("isfavinartpiecepreview", isFavourite);
   return (
     <>
       <Link href={`/art-pieces/${slug}`} key={slug}>

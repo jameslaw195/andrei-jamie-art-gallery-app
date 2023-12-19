@@ -17,11 +17,9 @@ export default function ArtPieceDetailsPage({
   if (!artPiece) {
     return null;
   }
-  console.log("art piece info", artPiecesInfo);
 
   return (
     <>
-      <h1>Hi art piece details</h1>
       <ArtPieceDetails
         name={newPiece.name}
         image={newPiece.imageSource}

@@ -33,7 +33,7 @@ export default function ArtPieceDetails({
     setComments([{ id: uid(), slug, time, date, ...newComment }, ...comments]);
   }
 
-  console.log("colors here", colors);
+  console.log("fav button", FavouriteButton);
 
   return (
     <>
