@@ -18,10 +18,7 @@ export default function ArtPieces({
           artist={artPiece.artist}
           slug={artPiece.slug}
           onToggleFavourite={onToggleFavourite}
-          // isFavorite={
-          //   pieces.find((artPiece1) => artPiece1.slug === artPiece.slug)
-          //     ?.isFavorite
-          // }
+          isFavorite={artPiece.isFavorite}
         />
       ))}
     </>
