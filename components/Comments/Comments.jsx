@@ -1,7 +1,9 @@
-export default function Comments({ comments }) {
+export default function Comments({ comments, slug }) {
+  const filteredComments = comments.filter((comment) => comment.slug === slug);
+
   return (
     <div>
-      {comments?.map((comment, index) => {
+      {filteredComments?.map((comment, index) => {
         return (
           <div className="comments-container" key={index}>
             <p>{comment.text}</p>
