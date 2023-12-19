@@ -5,6 +5,7 @@ import Comments from "../Comments/Comments";
 import { uid } from "uid";
 import { useImmerLocalStorageState } from "@/pages/lib/hook/useImmerLocalStorageState";
 import Colors from "../Colors/Colors";
+import Link from "next/link";
 
 export default function ArtPieceDetails({
   slug,
@@ -30,18 +31,21 @@ export default function ArtPieceDetails({
       minute: "2-digit",
     });
 
-    setComments([{ id: uid(), time, date, ...newComment }, ...comments]);
+    setComments([{ id: uid(), slug, time, date, ...newComment }, ...comments]);
   }
 
-  console.log("colors here", colors);
+  console.log("fav button", FavouriteButton);
 
   return (
-    <>
+    <div>
       <Image src={image} alt={` ${name}`} width={243} height={192} />
+      <Link href={`/art-pieces`} className="back-button">
+        ⬅ Back
+      </Link>
       <h1> {name} </h1>
-      <p> {artist} </p>
-      <p> {year} </p>
-      <p> {genre} </p>
+      <h3 className="artist-name"> {artist} </h3>
+      <h4> {year} </h4>
+      <h4> {genre} </h4>
       <FavouriteButton
         onToggleFavourite={onToggleFavourite}
         isFavourite={isFavourite}
@@ -49,7 +53,8 @@ export default function ArtPieceDetails({
       />
       <Colors colors={colors} />
       <CommentForm onAddComment={handleAddComment} />
-      <Comments comments={comments} />
-    </>
+
+      <Comments comments={comments} slug={slug} />
+    </div>
   );
 }

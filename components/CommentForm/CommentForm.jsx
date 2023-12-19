@@ -13,7 +13,7 @@ export default function CommentForm({ onAddComment }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="comment-form" onSubmit={handleSubmit}>
       <label htmlFor="comment">Leave a comment!</label>
       <input type="text" id="comment" name="text"></input>
       <button type="submit">Send</button>

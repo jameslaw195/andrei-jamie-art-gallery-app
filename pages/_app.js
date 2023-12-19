@@ -1,5 +1,6 @@
 import GlobalStyle from "../styles";
 import useSWR from "swr";
+import "../app.css";
 import Layout from "@/components/Layout/Layout";
 import { useImmerLocalStorageState } from "./lib/hook/useImmerLocalStorageState";
 
@@ -26,10 +27,7 @@ export default function App({ Component, pageProps }) {
     { defaultValue: [] }
   );
 
-  // console.log("favourites array", artPiecesInfo);
-
   function handleToggleFavourite(clickedSlug) {
-    console.log("this is clicked slug", clickedSlug);
     const artPieceFavourite = artPiecesInfo.find(
       (piece) => piece.slug === clickedSlug
     );

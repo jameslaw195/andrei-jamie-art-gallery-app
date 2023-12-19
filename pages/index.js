@@ -8,7 +8,7 @@ export default function SpotlightPage({ onToggleFavourite, artPiece }) {
 
   return (
     <>
-      <h1> I am in in index.js in pages root </h1>
+      <h1> Lawrence and Leahu Galleries </h1>
       <Spotlight
         onToggleFavourite={onToggleFavourite}
         randomPiece={randomPiece}
