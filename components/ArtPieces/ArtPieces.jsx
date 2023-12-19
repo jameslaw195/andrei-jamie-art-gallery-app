@@ -11,19 +11,18 @@ export default function ArtPieces({
   return (
     <>
       {artPiece.map((artPiece) => (
-        <Link href={`/art-pieces/${artPiece.slug}`} key={artPiece.slug}>
-          <ArtPiecePreview
-            image={artPiece.imageSource}
-            name={artPiece.name}
-            artist={artPiece.artist}
-            slug={artPiece.slug}
-            onToggleFavourite={onToggleFavourite}
-            // isFavorite={
-            //   pieces.find((artPiece1) => artPiece1.slug === artPiece.slug)
-            //     ?.isFavorite
-            // }
-          />
-        </Link>
+        <ArtPiecePreview
+          key={artPiece.slug}
+          image={artPiece.imageSource}
+          name={artPiece.name}
+          artist={artPiece.artist}
+          slug={artPiece.slug}
+          onToggleFavourite={onToggleFavourite}
+          // isFavorite={
+          //   pieces.find((artPiece1) => artPiece1.slug === artPiece.slug)
+          //     ?.isFavorite
+          // }
+        />
       ))}
     </>
   );
