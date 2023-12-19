@@ -51,6 +51,6 @@ export default function ArtPieceDetails({
       <CommentForm onAddComment={handleAddComment} />
 
       <Comments comments={comments} slug={slug} />
-    </>
+    </div>
   );
 }
