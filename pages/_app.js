@@ -1,5 +1,6 @@
 import GlobalStyle from "../styles";
 import useSWR from "swr";
+import "../app.css";
 import Layout from "@/components/Layout/Layout";
 import { useImmerLocalStorageState } from "./lib/hook/useImmerLocalStorageState";
 

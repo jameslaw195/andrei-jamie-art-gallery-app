@@ -21,7 +21,6 @@ export default function ArtPieceDetailsPage({
 
   return (
     <>
-      <h1>Hi art piece details</h1>
       <ArtPieceDetails
         name={newPiece.name}
         image={newPiece.imageSource}
