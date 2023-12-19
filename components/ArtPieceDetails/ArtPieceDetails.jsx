@@ -3,7 +3,7 @@ import FavouriteButton from "../FavouriteButton/FavouriteButton";
 import CommentForm from "../CommentForm/CommentForm";
 import Comments from "../Comments/Comments";
 import { uid } from "uid";
-import { useImmerLocalStorageState } from "@/pages/lib/hook/useImmerLocalStorageState";
+import useImmerLocalStorageState from "@/pages/lib/hook/useImmerLocalStorageState";
 import Colors from "../Colors/Colors";
 import Link from "next/link";
 

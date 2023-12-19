@@ -2,7 +2,7 @@ import GlobalStyle from "../styles";
 import useSWR from "swr";
 import "../app.css";
 import Layout from "@/components/Layout/Layout";
-import { useImmerLocalStorageState } from "./lib/hook/useImmerLocalStorageState";
+import useImmerLocalStorageState from "./lib/hook/useImmerLocalStorageState";
 
 const apiURL = "https://example-apis.vercel.app/api/art";
 
