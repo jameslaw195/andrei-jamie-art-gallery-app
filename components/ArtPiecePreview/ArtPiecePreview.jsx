@@ -18,12 +18,13 @@ export default function ArtPiecePreview({
       </Link>
 
       {/* <h1> Name: {name} </h1> */}
-      <p>{`${name} by ${artist}`}</p>
+
       <FavouriteButton
         isFavourite={isFavourite}
         onToggleFavourite={onToggleFavourite}
         slug={slug}
       />
+      <p>{`${name} by ${artist}`}</p>
     </>
   );
 }
