@@ -30,7 +30,7 @@ export default function ArtPieceDetails({
       minute: "2-digit",
     });
 
-    setComments([{ id: uid(), time, date, ...newComment }, ...comments]);
+    setComments([{ id: uid(), slug, time, date, ...newComment }, ...comments]);
   }
 
   console.log("colors here", colors);
@@ -49,7 +49,7 @@ export default function ArtPieceDetails({
       />
       <Colors colors={colors} />
       <CommentForm onAddComment={handleAddComment} />
-      <Comments comments={comments} />
+      <Comments comments={comments} slug={slug} />
     </>
   );
 }
