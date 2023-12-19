@@ -5,14 +5,9 @@ export default function FavouriteButton({
   isFavourite,
   onToggleFavourite,
 }) {
-  // console.log("isfavourite", isFavourite);
-
   return (
-    <button
-      className="favourite-button"
-      onClick={() => onToggleFavourite(slug)}
-    >
-      <HeartIcon fill={isFavourite ? "#FF0000" : "#000000"} />
+    <button onClick={() => onToggleFavourite(slug)}>
+      <HeartIcon fill={isFavourite ? "red" : "black"} />
     </button>
   );
 }
