@@ -31,6 +31,7 @@ export default function ArtPieceDetailsPage({
         onToggleFavourite={onToggleFavourite}
         artPiecesInfo={artPiecesInfo}
         slug={newPiece.slug}
+        colors={newPiece.colors}
       />
     </>
   );

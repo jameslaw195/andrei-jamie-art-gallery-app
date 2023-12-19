@@ -4,6 +4,7 @@ import CommentForm from "../CommentForm/CommentForm";
 import Comments from "../Comments/Comments";
 import { uid } from "uid";
 import { useImmerLocalStorageState } from "@/pages/lib/hook/useImmerLocalStorageState";
+import Colors from "../Colors/Colors";
 
 export default function ArtPieceDetails({
   slug,
@@ -14,6 +15,7 @@ export default function ArtPieceDetails({
   genre,
   onToggleFavourite,
   isFavourite,
+  colors,
 }) {
   const [comments, setComments] = useImmerLocalStorageState("comment", {
     defaultValue: [],
@@ -30,6 +32,9 @@ export default function ArtPieceDetails({
 
     setComments([{ id: uid(), time, date, ...newComment }, ...comments]);
   }
+
+  console.log("colors here", colors);
+
   return (
     <>
       <Image src={image} alt={` ${name}`} width={243} height={192} />
@@ -43,7 +48,6 @@ export default function ArtPieceDetails({
         slug={slug}
       />
       <CommentForm onAddComment={handleAddComment} />
-      <Comments comments={comments} />
     </>
   );
 }
