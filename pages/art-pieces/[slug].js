@@ -17,7 +17,6 @@ export default function ArtPieceDetailsPage({
   if (!artPiece) {
     return null;
   }
-  console.log("art piece info", artPiecesInfo);
 
   return (
     <>

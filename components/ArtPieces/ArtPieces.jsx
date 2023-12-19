@@ -8,6 +8,8 @@ export default function ArtPieces({
   pieces,
   artPiecesInfo,
 }) {
+  // console.log(isFavourite);
+
   return (
     <div className="art-pieces-container">
       {artPiece.map((artPiece) => (
@@ -18,7 +20,9 @@ export default function ArtPieces({
           artist={artPiece.artist}
           slug={artPiece.slug}
           onToggleFavourite={onToggleFavourite}
-          isFavorite={artPiece.isFavorite}
+          isFavourite={artPiecesInfo.find(
+            (piece) => piece.slug === artPiece.slug
+          )}
         />
       ))}
     </div>
