@@ -11,7 +11,7 @@ export default function ArtPieces({
   // console.log(isFavourite);
 
   return (
-    <>
+    <div className="art-pieces-container">
       {artPiece.map((artPiece) => (
         <ArtPiecePreview
           key={artPiece.slug}
@@ -25,6 +25,6 @@ export default function ArtPieces({
           )}
         />
       ))}
-    </>
+    </div>
   );
 }

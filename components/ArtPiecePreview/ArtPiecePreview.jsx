@@ -13,7 +13,7 @@ export default function ArtPiecePreview({
 }) {
   // console.log("isfavinartpiecepreview", isFavourite);
   return (
-    <>
+    <div className="art-piece-preview-container">
       <Link href={`/art-pieces/${slug}`} key={slug}>
         <Image src={image} alt={` ${name}`} width={243} height={192} />
       </Link>
@@ -25,7 +25,7 @@ export default function ArtPiecePreview({
         onToggleFavourite={onToggleFavourite}
         slug={slug}
       />
-      <p>{`${name} by ${artist}`}</p>
-    </>
+      <h3 className="name-artist">{`${name} by ${artist}`}</h3>
+    </div>
   );
 }
